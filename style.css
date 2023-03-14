@@ -8,18 +8,12 @@ body{
     background: #fff
 }
 
-a{
-    font-family: "Quicksand", sans-serif;
-    background-color: #000;
-    color: #fff;
-    text-decoration: none;
-    padding: 8px;
-    border-radius: 8px;
-    margin:1px
-}
-
 .home{
-    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    aspect-ratio: 16/8;
+    height: auto;
 }
 
 .home::after {
@@ -34,7 +28,7 @@ a{
     background: #f5f5f5;
     margin: 0px;
     padding: 0px;
-    width: 50vw;
+    width: 50%;
     align-items: center;
     justify-content: center;
     float: left;
@@ -65,17 +59,29 @@ p{
     margin-inline: 1.5em;
 }
 
+.links{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.button{
+    width: 50px;
+}
+
 .foto{
-    float:left;
-    box-shadow: 0 3px 1px rgba(0,0,0,0.12), 10px 0 10px rgba(0,0,0,0.5);
+    /*float:left;
+    box-shadow: 0 3px 1px rgba(0,0,0,0.12), 10px 0 10px rgba(0,0,0,0.5);*/
+    width: 50%;
+
 }
 
 .about{
-    margin: 3em
+    margin-left: 100px;  
+    margin-right: 100px;
 }
-
-.about-me{
-    margin: 5em;
+.about-titulo{
+    padding: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,48 +96,40 @@ p{
         height: 100vh;
     }
 }
-@media only screen and (max-width: 2400px) {
-    .foto, .container{
-        width: 50vw;
-    }
-    .container{
-        aspect-ratio: 419/628;
-        height: 100vh;
-    }
-    .home{
-        width: 100vw;
-        aspect-ratio: 838/628;
-    }
-    .container, .home{
-        height: auto;
-    }
-}
 
-@media only screen and (max-width: 655px) {
+
+@media only screen and (max-width: 500px) {
+
+
     h1 {
       font-size: 10vw;
     }
+
+    .home{
+        height: 70vh;
+        flex-direction: column;
+        align-items: center;
+        aspect-ratio: none;
+    }
+
     .foto{
-        width: 100%;
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        z-index: 0;
+        width: 50vw;
+        border-radius: 50%;
     }
     .container{
         justify-content: space-evenly;
         width: 100vw;
         height: 200px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
     }
     .my-description{
         font-size: 18px;
         margin: 0px;
         margin-left: 2em;
         margin-right: 2em;
+    }
+    .about{
+        margin: 2px;
+        width: 100%;
     }
   }
  
